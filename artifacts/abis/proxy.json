@@ -1,0 +1,90 @@
+[
+    {
+        "members": [
+            {
+                "name": "key",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "value",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "timestamp",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "publisher",
+                "offset": 3,
+                "type": "felt"
+            }
+        ],
+        "name": "Entry",
+        "size": 4,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "value",
+                "type": "felt"
+            },
+            {
+                "name": "to",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "proxy_event",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "get_pontis_address",
+        "outputs": [
+            {
+                "name": "res",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "address",
+                "type": "felt"
+            }
+        ],
+        "name": "set_pontis_address",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "contract_address",
+                "type": "felt"
+            },
+            {
+                "name": "new_entry",
+                "type": "Entry"
+            },
+            {
+                "name": "signature_r",
+                "type": "felt"
+            },
+            {
+                "name": "signature_s",
+                "type": "felt"
+            }
+        ],
+        "name": "proxy",
+        "outputs": [],
+        "type": "function"
+    }
+]

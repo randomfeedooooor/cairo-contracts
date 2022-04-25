@@ -10,6 +10,8 @@ Contracts for the randomfeedooooor verifier
 1. Install [Poetry](https://python-poetry.org/)
 1. Clone this repo
 
+### Helpful Commands
+
 ```shell
 # Activate a Poetry virtual environment
 poetry shell
@@ -22,4 +24,7 @@ poetry update openzeppelin-cairo-contracts
 
 # Compile all contracts
 nile compile
+
+# Deploy proxy
+nile deploy proxy --alias proxy --network goerli
 ```

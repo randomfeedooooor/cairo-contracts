@@ -1,0 +1,1 @@
+0x016dc7e122b74f1d5166a7a4c479a51c6f887f1be9fd469c1aad7e48b3d5b28a:artifacts/abis/proxy.json:proxy
