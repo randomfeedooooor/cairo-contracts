@@ -17,6 +17,9 @@ poetry shell
 # Install dependencies
 poetry install
 
+# Optional update openzeppelein contracts
+poetry update openzeppelin-cairo-contracts
+
 # Compile all contracts
 nile compile
 ```
