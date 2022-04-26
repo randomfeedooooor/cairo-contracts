@@ -13,6 +13,10 @@ from contracts.entry.library import Entry
 func pontis_address() -> (address : felt):
 end
 
+@storage_var
+func alpha_string() -> (alpha : felt):
+end
+
 #########################
 ######### EVENTS ########
 #########################
@@ -36,6 +40,16 @@ func get_pontis_address{
     }() -> (res : felt):
     let (contract_address) = pontis_address.read()
     return (contract_address)
+end
+
+@view
+func get_alpha{
+        syscall_ptr : felt,
+        pedersen_ptr : HashBuiltin,
+        range_check_ptr
+    }() -> (res : felt):
+    let (alpha) = alpha_string.read()
+    return(alpha)
 end
 
 #########################
@@ -71,5 +85,17 @@ func proxy{
     ):
     let (contract_address) = pontis_address.read()
     IOracle.submit_entry(contract_address=contract_address, new_entry=new_entry, signature_r=signature_r, signature_s=signature_s)
+    return ()
+end
+
+@external
+func set_alpha{
+        pedersen_ptr : HashBuiltin,
+        syscall_ptr : felt,
+        range_check_ptr
+    }(
+        alpha : felt
+    ):
+    alpha_string.write(alpha)
     return ()
 end
